@@ -1,0 +1,357 @@
+@import"./mixins";
+@import"./variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    background-color: #fff;
+   width: 100%;
+   position: sticky;
+   top: 0;
+height: 10vh;
+
+    .navbar{
+        margin: 0 auto;
+       padding-top: 25px;
+        display: flex;
+     align-items: center;
+        justify-content: space-around;
+&__heading{
+    width: 10%;
+    @include mobile{
+    width: 20%;
+    }
+}
+        &__list{
+            display: flex;
+          align-items: center;
+          gap: 60px;
+          justify-content:center;
+          @include mobile{
+    display: none;
+          }
+        }
+        &__link{
+            color:#000;
+            font-size: 20px;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.price{
+padding-top: 50px;
+    background-color: #000;
+    height: 200px;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+row-gap: 20px;
+p{
+    color: #fff;
+    font-size: 20px;
+}
+a{
+    color: #fff;
+    text-decoration: underline;
+}
+}
+.main{
+    width: 100%;
+    background-color: rgb(69, 19, 20);
+    display: flex;
+    
+    @include mobile{
+     flex-direction: column-reverse;
+    }
+   
+    &__image{
+       
+        margin: 0 auto;
+       img{
+     
+       width: 600px;
+       height: 700px;
+       margin-bottom: 30px;
+       @include mobile{
+        width: 300px;
+        height: 400px;
+    }
+       }
+    }
+    &__text{
+    @include mobile{
+margin-left: 130px;
+        margin-top: 100px;
+    }
+        color: #fff;
+        margin-right: 100px;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: 
+     center;
+     row-gap: 30px;
+     &-heading{
+        font-size: 45px;
+        @include mobile{
+            font-size: 25px;
+          
+        }
+     }
+     &-button{
+        width: 100px;
+        height:40px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+       &:hover{
+box-shadow: 0px 0px 10px 0px #fff;
+background-color: #cac7c7;
+       }
+     }
+     &-paraghraph{
+  font-size: 20px;
+     }
+    }
+}
+.collection{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ height: 100vh;
+ width: 100%;
+@include mobile{
+   flex-direction: column;
+   align-items: center;
+
+
+}
+    display: flex;
+    &__text{
+        margin: 0 auto;
+        line-height: 2;
+        &-heading{
+            font-size: 30px;
+        }
+     &-btn{
+        color: #fff;
+        background-color: #000;
+        padding: 15px;
+        border: none;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            background-color: #676565;
+        }
+     }
+    }
+    &__image{
+        img{
+           width: 30%;
+           height: 50vh;
+           @include mobile{
+           width: 200px;
+           height: 300px;
+      margin-left: 100px;
+           }
+        }
+    }
+}
+
+.life{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__fixed{
+        top: 0;
+        position: fixed;
+        z-index: -1;
+        @include mobile{
+            width: 100%;
+            height: 50vh;
+        }
+    }
+
+    &__content {
+        color: #fff;
+    }
+}
+.parts{
+    
+    background-color: #fff;
+    @include mobile{
+      flex-direction: column;
+      column-gap: 30px;
+    }
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   gap: 20px;
+    &__clothing{
+display: flex;
+flex-direction: column;
+row-gap: 20px;
+  img{
+  width: 600px;
+  @include mobile{
+    width: 100%;
+  }
+  }
+  &-btn{
+    width: 150px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background-color: #676565;
+    }
+  }
+  &-heading{
+    font-size: 25px;
+  }
+    }
+    &__right{
+        display: flex;
+flex-direction: column;
+row-gap: 20px;
+        img{
+    width: 600px;
+    @include mobile{
+        width: 100%;
+      }
+        }
+        &-btn{
+            width: 150px;
+            height: 40px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background-color: #676565;
+            }
+        }
+        &-heading{
+            font-size: 25px;
+        }
+    }
+}
+
+.join{
+    background-color: #fff;
+ background-image: url(../assets/images/joinbg.webp);
+ background-position: center;
+ background-size: cover;
+ height: 60vh;
+ width: 100%;
+ @include mobile{
+    height: 80vh;
+    width: 100%;
+ }
+ &__text{
+    @include mobile{
+width: 70%;
+    }
+    word-spacing: 20px;
+    color: #fff;
+  width:60%;
+ padding-top: 50px;
+ padding-left: 100px;
+    &-heading{
+        font-size: 20px;
+        @include mobile{
+ font-size: 15px;
+        }
+
+    }
+    &-heading2{
+        font-size: 50px;
+        @include mobile{
+ font-size: 25px;
+        }
+    }
+    &-form{
+        &__input{
+        padding: 15px 100px;
+        font-size: 15px;
+        margin-bottom: 15px;
+        @include mobile{
+            padding: 10px 50px;
+        }
+        }
+    }
+    &-btn{
+        color: #fff;
+        background-color: #000;
+  border: none;
+  padding: 10px 30px;
+  transition: all 0.3s ease-in-out;
+  &:hover{
+    background-color: #676565;
+}
+    }
+ }
+}
+
+
+footer{
+    @include mobile{
+        height: 80vh;
+    }
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+ height: 40vh;
+width: 100%;
+ display: flex;
+ justify-content: space-around;
+ @include mobile{
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+ }
+ .info{
+&__list{
+line-height: 4;
+    &-link{
+        color: #000;
+        text-decoration: underline;
+    }
+}
+ }
+.social{
+ 
+  a{
+    color: #000;
+    opacity: 0.8;
+  }
+    line-height: 3;
+   &__link{
+padding-left: 5px;
+    &-img{
+        width: 25px;
+        padding-top: 20px;
+    }
+   } 
+   &__heading{
+    font-size: 35px;
+    opacity: 0.7;
+    font-weight: 400;
+   }
+}
+}
